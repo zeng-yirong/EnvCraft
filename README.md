@@ -270,53 +270,9 @@ python examples/claw_envs/smoke_test.py --repo-root "$UNI_AGENT_DIR"
 
 For a full RL launch, review and adapt [`run_claw_dapo.sh`](./train_code/uni-agent/examples/claw_envs/run_claw_dapo.sh) and the accompanying [training README](./train_code/uni-agent/examples/claw_envs/README.md). In particular, configure `MODEL_PATH`, hardware parallelism, output directories, and the VERL installation for your cluster.
 
-> ⚠️ **Safety note:** native Claw rollouts execute commands on the host rather than inside a container. Run only trusted tasks and models on an isolated training machine. The bundled launcher also stops Ray processes and clears its configured Ray temporary directory; inspect it before executing it on a shared machine.
-
 ---
 
-## 🔬 Reproducibility notes
 
-The paper trains Qwen3 and Qwen3.5 models with GRPO in VERL. Its primary experiments use Claw-specialized data, a rollout batch size of 64, a 32K-token generation limit, and up to 64 action turns. These settings are experiment-level references, not hardware-independent defaults; the bundled launcher should be scaled to the available model, accelerator, and memory budget.
-
-For the local task runtime, see:
-
-- [Workplace rollout README](./train_code/uni-agent/examples/claw_envs/README.md)
-- [Native dataset guide](./train_code/uni-agent/examples/claw_envs/NATIVE_DATASET.md)
-- [Training launcher](./train_code/uni-agent/examples/claw_envs/run_claw_dapo.sh)
-- [Environment-package design recipe](./ClawForge-Claw_env/claw_env_recipe.md)
-
----
-
-## ⚠️ Limitations
-
-- All environments are synthetic research artifacts, not production integrations.
-- The full manuscript-scale corpus and the checked-in release snapshot have different counts; use the manifest and file layout in this repository when reproducing a release-level experiment.
-- Generated examples may resemble operational domains such as finance, healthcare, human resources, security, or travel, but they are not suitable for real-world decision making.
-
----
-
-## 📝 Citation
-
-The accompanying manuscript is currently an **anonymous submission**. Please cite the public paper version once bibliographic metadata and a permanent URL are released. This section will be updated with the canonical BibTeX entry at that time.
-
----
-
-## 📄 License
-
-This repository is released under the [Apache License 2.0](./LICENSE). Please preserve applicable notices when redistributing third-party components, including the vendored Uni-Agent and VERL code. Users are responsible for ensuring that their intended use of generated datasets and any downstream data complies with applicable requirements.
-
----
-
-## 🤝 Contributing
-
-Issues and pull requests are welcome. When contributing a new environment or task, please include:
-
-1. Clear environment documentation and typed tool/CLI descriptions;
-2. Deterministic state initialization and verification;
-3. A scenario or smoke test;
-4. No real credentials, personal data, or production endpoints.
-
----
 
 <div align="center">
 
