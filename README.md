@@ -40,7 +40,7 @@ The framework produces **139 interactive environments** and **19,777 tasks** spa
 | Resource | Link |
 | --- | --- |
 | 📊 **Dataset** | [ClawForge/clawforge](https://huggingface.co/datasets/ClawForge/clawforge) |
-| 🤖 **Model** | [ClawForge/clawforge](https://huggingface.co/ClawForge/clawforge) *(placeholder — coming soon)* |
+| 🤖 **Model** | [ClawForge/clawforge](https://huggingface.co/ClawForge/clawforge)  |
 
 ---
 
@@ -70,11 +70,6 @@ The framework produces **139 interactive environments** and **19,777 tasks** spa
 11. [Claw task format and reward](#-claw-task-format-and-reward)
 12. [Regenerating Claw tool chains](#-regenerating-claw-tool-chains)
 13. [Training with Uni-Agent and VERL](#-training-with-uni-agent-and-verl)
-14. [Reproducibility notes](#-reproducibility-notes)
-15. [Limitations](#-limitations)
-16. [Citation](#-citation)
-17. [License](#-license)
-18. [Contributing](#-contributing)
 
 ---
 
